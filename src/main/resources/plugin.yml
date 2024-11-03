@@ -1,0 +1,32 @@
+name: GUNshop
+version: 1.0.0
+main: fr.raphm.gunshop.GunShopPlugin
+api-version: 1.21.3
+
+permissions :
+  gunshop.gunshop:
+    description: "This is a permission node"
+    default: not op
+  gunshop.cheat:
+    description: "This is a permission node"
+    default: op
+
+commands:
+  gunshop:
+    description: "Opens the main GUNshop interface"
+    usage: "/gunshop"
+    aliases: [shop, gshop, guns, gs]
+    permission: gunshop.gunshop
+    permission-message: "You do not have permission to use this command"
+
+  sell:
+    description: "Sell an item to the GUNshop"
+    usage: "/sell"
+    permission: gunshop.gunshop
+    permission-message: "You do not have permission to use this command"
+
+  sell_cheat:
+    description: "Sell an item to the GUNshop (cheat)"
+    usage: "/sell_cheat <item> <count> <price>"
+    permission: gunshop.cheat
+    permission-message: "You do not have permission to use this command"
